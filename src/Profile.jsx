@@ -4,7 +4,7 @@ import Spinach from "./Spinach";
 import Popeye from "./Popeye";
 
 const Profile = () => {
-  const { name } = useParams();
+  const { profile } = useParams();
 
   return (
     <div>
@@ -12,9 +12,9 @@ const Profile = () => {
       <p>So, how are you?</p>
       <hr />
       <h2>The profile visited is here:</h2>
-      {name === "popeye" ? (
+      {profile === "popeye" ? (
         <Popeye />
-      ) : name === "spinach" ? (
+      ) : profile === "spinach" ? (
         <Spinach />
       ) : (
         <DefaultProfile />
